@@ -1,7 +1,11 @@
 package com.ardiansyahwelli_v1.ardiansyahwelly_v1.model;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import javax.xml.crypto.Data;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -12,8 +16,8 @@ public class UsersModel {
     LocalDateTime createdAt;
 
     @Column(name = "updated_at")
-    @CreationTimestamp
-    LocalDateTime updatedAt;
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
